@@ -23,10 +23,10 @@ import formatters from '../../../../utils/formatters';
 import MissingTrendGraph from './missingTrend';
 import options from './options';
 
-const backgroundColor1 = [['rgba(255, 99, 132, 0.2)']];
+const backgroundColor1 = [['rgba(255, 99, 132, 0.5)']];
 const borderColor1 = [['rgba(255, 99, 132, 1)']];
 
-const backgroundColor2 = [['rgba(255, 159, 64, 0.2)']];
+const backgroundColor2 = [['rgba(255, 159, 64, 0.35)']];
 const borderColor2 = [['rgba(255, 159, 64, 1)']];
 
 const backgroundColor3 = [['rgba(255, 206, 86, 0.2)']];

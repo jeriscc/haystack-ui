@@ -23,19 +23,17 @@ import formatters from '../../../../utils/formatters';
 import options from './options';
 import MissingTrendGraph from './missingTrend';
 
-const backgroundColorTotal = [['rgba(54, 162, 235, 0.2']];
-const borderColorTotal = [['rgba(54, 162, 235, 1)']];
+const backgroundColorSuccess = [['rgba(54, 162, 235, 0.2']];
+const borderColorSuccess = [['rgba(54, 162, 235, 1)']];
 
-const backgroundColorSuccess = [['rgba(75, 192, 192, 0.2']];
-const borderColorSuccess = [['rgba(75, 192, 192, 1)']];
-
-const backgroundColorFailure = [['rgba(229, 28, 35, 0.2)']];
+const backgroundColorFailure = [['rgba(251, 208, 213, 0.7)']];
 const borderColorFailure = [['rgba(229, 28, 35, 1)']];
 
 const countChartOptions = _.cloneDeep(options);
 
 countChartOptions.scales.yAxes = [{
     display: true,
+    stacked: true,
     ticks: {
         callback(value) {
             const formattedValue = formatters.toNumberString(value);
@@ -83,16 +81,8 @@ const CountGraph = ({countPoints, successPoints, failurePoints, from, until}) =>
                 borderWidth: 1,
                 pointRadius: 1,
                 pointHoverRadius: 3
-            },
-            {
-                label: 'Total     ',
-                data: totalData,
-                backgroundColor: backgroundColorTotal,
-                borderColor: borderColorTotal,
-                borderWidth: 1,
-                pointRadius: 1,
-                pointHoverRadius: 3
-            }]
+            }
+        ]
     };
 
     return (<div className="col-md-12">
